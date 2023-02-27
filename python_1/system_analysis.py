@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 
 
-Tf=15# plot range
+Tf=20# plot range
 T=np.arange(0,Tf,0.1)
 
 #stability margins
@@ -70,10 +70,12 @@ def bode_plot(up, down):
     plt.title('Bode Plot', fontsize=20)
 
 #nyquist plot
-
-#plt.axis('equal')
-#R1,I,W=nyquist(sys,color='r',linewidth=2)
-#plt.title('Nyquist PLot', fontsize=20)
+def nyquist_plot(up, down):
+    lti = tf(up,down)
+    plt.figure(figsize=(15,15))
+    plt.axis('equal')
+    R1,I,W = nyquist(lti, color='r', linewidth=2)
+    plt.title('Nyquist PLot', fontsize=20)
 
 #nichols plot
 def nichols_plot(up, down):
