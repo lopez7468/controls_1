@@ -4,8 +4,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from system_analysis import*
 
-num = [1, 4]
-den = [1,4,2]
+num = [1]
+den = [1,1]
 sys= tf(num,den)
 
 print('G(s)= ', sys)
@@ -17,7 +17,7 @@ stability(num, den)
 
 #insert plots needed here
 
-impulse_response(num, den)
+step_response(num, den)
 
 
 #shows plots
